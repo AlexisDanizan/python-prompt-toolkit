@@ -54,7 +54,7 @@ def call_soon_threadsafe(
     However, we want to set a deadline value, for when the rendering should
     happen. (The UI should stay responsive).
     """
-    loop2 = loop or get_event_loop()
+    loop2 = get_event_loop()
 
     # If no `max_postpone_time` has been given, schedule right now.
     if max_postpone_time is None:
